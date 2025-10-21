@@ -194,7 +194,7 @@ body {
     gap: var(--spacing-100);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
     :root {
         --max-card-w: 37.5rem;
         --max-product-image-height: 28.5rem;
