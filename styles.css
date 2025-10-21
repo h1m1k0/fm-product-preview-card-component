@@ -35,6 +35,13 @@
     --spacing-200: 1rem;
     --spacing-100: 0.5rem;
     --spacing-50: 0.25rem;
+
+    --rounded-sm: 0.5rem;
+
+    --max-card-w: 21.875rem;
+    --max-product-image-height: 21.375rem;
+
+    --screen-md: 48rem;
 }
 
 html {
@@ -51,6 +58,23 @@ html {
     box-sizing: inherit;
 }
 
+button, 
+input[type="submit"], 
+input[type="button"],
+input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.font-secondary {
+    font-family: 'Fraunces', serif;
+}
+
 .font-bold {
     font-weight: var(--font-bold);
 }
@@ -61,7 +85,7 @@ html {
 
 .text-xs {
     font-size: var(--text-xs);
-    line-height: 120%;
+    line-height: 117%;
     letter-spacing: 5px;
 }
 
@@ -73,7 +97,7 @@ html {
 
 .text-base {
     font-size: var(--text-base);
-    line-height: 160%;
+    line-height: 150%;
     letter-spacing: 0;
 }
 
@@ -87,4 +111,90 @@ html {
     font-size: var(--text-lg);
     line-height: 100%;
     letter-spacing: 0;
+}
+
+.text-white {
+    color: var(--white);
+}
+
+.text-grey {
+    color: var(--grey);
+}
+
+.text-black {
+    color: var(--black);
+}
+
+.text-green-500 {
+    color: var(--green-500);
+}
+
+.text-green-700 {
+    color: var(--green-700);
+}
+
+.text-line-through {
+    text-decoration: line-through;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cream);
+    height: 100vh;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    max-width: var(--max-card-w);
+    border-radius: var(--rounded-sm);
+    background-color: var(--white);
+    overflow: hidden;
+}
+
+.product-image {
+    display: block;
+    flex: 1 0 0;
+    width: 100%;
+    height: auto;
+    max-height: var(--max-product-image-height);
+}
+
+.product-card-body {
+    flex: 1 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-300);
+    padding-inline: var(--spacing-400);
+    padding-block: var(--spacing-400);
+}
+
+.prices {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-200);
+}
+
+.add-to-cart-button{
+    display: inline-flex;
+    padding-inline: var(--spacing-400);
+    padding-block: var(--spacing-200);
+    border-radius: var(--rounded-sm);
+    background-color: var(--green-500);
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-100);
+}
+
+@media screen and (min-width: 768px) {
+    :root {
+        --max-card-w: 37.5rem;
+        --max-product-image-height: 28.5rem;
+    }
+
+    .product-card {
+        flex-direction: row;
+    }
 }
