@@ -205,6 +205,6 @@ body {
     }
 
     .card-content {
-        gap: var(--spacing-400);
+        justify-content: space-between;
     }
 }
